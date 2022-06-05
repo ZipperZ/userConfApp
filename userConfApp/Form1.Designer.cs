@@ -96,6 +96,8 @@
             this.userGrid.Size = new System.Drawing.Size(560, 300);
             this.userGrid.TabIndex = 7;
             this.userGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.userGrid_CellValueChanged);
+            this.userGrid.CurrentCellChanged += new System.EventHandler(this.userGrid_CurrentCellChanged);
+            this.userGrid.CurrentCellDirtyStateChanged += new System.EventHandler(this.userGrid_CurrentCellDirtyStateChanged);
             // 
             // ID
             // 

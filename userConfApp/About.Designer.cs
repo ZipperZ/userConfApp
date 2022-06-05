@@ -33,6 +33,7 @@
             this.uptimeLabel = new System.Windows.Forms.Label();
             this.uptimeCont = new System.Windows.Forms.Label();
             this.topLabel = new System.Windows.Forms.Label();
+            this.tempLaber = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // versionLabel
@@ -81,11 +82,21 @@
             this.topLabel.TabIndex = 4;
             this.topLabel.Text = "Test Program";
             // 
+            // tempLaber
+            // 
+            this.tempLaber.AutoSize = true;
+            this.tempLaber.Location = new System.Drawing.Point(10, 87);
+            this.tempLaber.Name = "tempLaber";
+            this.tempLaber.Size = new System.Drawing.Size(123, 15);
+            this.tempLaber.TabIndex = 5;
+            this.tempLaber.Text = "Clock not yet working";
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(184, 161);
+            this.Controls.Add(this.tempLaber);
             this.Controls.Add(this.topLabel);
             this.Controls.Add(this.uptimeCont);
             this.Controls.Add(this.uptimeLabel);
@@ -108,5 +119,6 @@
         private Label uptimeLabel;
         private Label uptimeCont;
         private Label topLabel;
+        private Label tempLaber;
     }
 }

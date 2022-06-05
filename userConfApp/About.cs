@@ -20,7 +20,7 @@ namespace userConfApp
         private void About_Load(object sender, EventArgs e)
         {
             versionContLabel.Text = mainWindow.version;
-            uptimeCont.Text = "Not Stored";//mainWindow.uptime.ToString();
+            uptimeCont.Text = mainWindow.uptime.ToString();
         }
 
         private void label1_Click(object sender, EventArgs e)
