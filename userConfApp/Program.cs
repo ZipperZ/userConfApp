@@ -9,9 +9,11 @@ namespace userConfApp
         ///  The main entry point for the application.
         /// </summary>
         /// 
-        [DllImport("kernel32.dll", SetLastError = true)]
+
+        //For adding Console to the program, was used for temp Sanity-Check
+        /*[DllImport("kernel32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool AllocConsole();
+        static extern bool AllocConsole();*/
         [STAThread]
        
         static void Main(string[] args)
@@ -20,7 +22,8 @@ namespace userConfApp
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            AllocConsole();
+            //For adding Console to the program, was used for temp Sanity-Check #2
+            /*AllocConsole();*/
             //Console.WriteLine("Hello");
             Application.Run(new mainWindow());
         }

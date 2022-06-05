@@ -38,7 +38,6 @@ namespace userConfApp
             XmlNodeList xmlConfContent = xmlConf.GetElementsByTagName("acc");
 
             //acc count
-            if (debugOut)  Console.WriteLine(xmlConfContent.Count); 
             accCount = xmlConfContent.Count;
 
             userAccount[] usersList = new userAccount[accCount];
@@ -67,23 +66,7 @@ namespace userConfApp
                     usersList[i].encPass = false;
                 }
 
-                if (debugOut)
-                {
-                    Console.Write("ID: ");
-                    Console.Write(confAcc.GetAttribute("id"));
-                    Console.Write(" | Acc Enabled: ");
-                    Console.WriteLine(confAcc.GetAttribute("enabled"));
-
-                    //TODO: Will have errors here if there will be more than one pass
-                    Console.Write("Username: ");
-                    Console.Write(confAcc.SelectSingleNode("user_name").InnerText);
-                    Console.Write(" | Password: ");
-                    Console.Write(confAcc.SelectSingleNode("password").InnerText);
-                    Console.Write(" | PassType: ");
-                    Console.WriteLine((confAcc.SelectSingleNode("password") as XmlElement).GetAttribute("type"));
-                    Console.WriteLine();
-                }
-                //Console.WriteLine(confAcc.InnerText);
+                
                 i++;
 
 
@@ -147,7 +130,6 @@ namespace userConfApp
             }
 
             //xmlConf.Save(xmlConfFile);
-            //Console.Write(xmlConf.InnerXml);
             return xmlConf.InnerXml;
 
         }
